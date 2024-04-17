@@ -14,6 +14,14 @@ Add an admin into web
     Add an admin      
     Validate user added Sucessfully             ${random}
 
+Add an admin
+    [Tags]          admin
+    [Documentation]         
+    Login with user 
+    Add an admin      
+    Validate user added Sucessfully             ${random}
+
+
 
 
 

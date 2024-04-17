@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.0 on win32)" generated="20240302 12:42:56.593" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\SyedIbadUrRehman\Desktop\hrm\tests">
+<suite id="s1-s1" name="Admin" source="C:\Users\SyedIbadUrRehman\Desktop\hrm\tests\admin.robot">
+<test id="s1-s1-t1" name="Add an admin into web" line="10">
+<kw name="testsetup" type="SETUP">
+<kw name="open default browser" library="globalkeyword">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240302 12:42:57.144" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com'.</msg>
+<msg timestamp="20240302 12:43:01.846" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240302 12:43:01.847" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 120
+Current browser version is 122.0.6261.95 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF709E24D02+56194]
+	(No symbol) [0x00007FF709D904B2]
+	(No symbol) [0x00007FF709C376AA]
+	(No symbol) [0x00007FF709C71652]
+	(No symbol) [0x00007FF709C7094D]
+	(No symbol) [0x00007FF709C6B84F]
+	(No symbol) [0x00007FF709C67DC2]
+	(No symbol) [0x00007FF709CB0954]
+	(No symbol) [0x00007FF709CA5C23]
+	(No symbol) [0x00007FF709C74A45]
+	(No symbol) [0x00007FF709C75AD4]
+	GetHandleVerifier [0x00007FF70A19D5BB+3695675]
+	GetHandleVerifier [0x00007FF70A1F6197+4059159]
+	GetHandleVerifier [0x00007FF70A1EDF63+4025827]
+	GetHandleVerifier [0x00007FF709EBF029+687785]
+	(No symbol) [0x00007FF709D9B508]
+	(No symbol) [0x00007FF709D97564]
+	(No symbol) [0x00007FF709D976E9]
+	(No symbol) [0x00007FF709D88094]
+	BaseThreadInitThunk [0x00007FFBA93855A0+16]
+	RtlUserThreadStart [0x00007FFBA992485B+43]
+</msg>
+<status status="FAIL" starttime="20240302 12:42:57.143" endtime="20240302 12:43:01.972"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>${width}</arg>
+<arg>${height}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240302 12:43:01.972" endtime="20240302 12:43:01.972"/>
+</kw>
+<status status="FAIL" starttime="20240302 12:42:57.142" endtime="20240302 12:43:01.972"/>
+</kw>
+<status status="FAIL" starttime="20240302 12:42:57.142" endtime="20240302 12:43:01.972"/>
+</kw>
+<tag>admin</tag>
+<status status="FAIL" starttime="20240302 12:42:57.141" endtime="20240302 12:43:01.973">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 120
+Current browser version is 122.0.6261.95 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF709E24D02+56194]
+	(No symbol) [0x00007FF709D904B2]
+	(No symbol) [0x00007FF709C376AA]
+	(No symbol) [0x00007FF709C71652]
+	(No symbol) [0x00007FF709C7094D]
+	(No symbol) [0x00007FF709C6B84F]
+	(No symbol) [0x00007FF709C67DC2]
+	(No symbol) [0x00007FF709CB0954]
+	(No symbol) [0x00007FF709CA5C23]
+	(No symbol) [0x00007FF709C74A45]
+	(No symbol) [0x00007FF709C75AD4]
+	GetHandleVerifier [0x00007FF70A19D5BB+3695675]
+	GetHandleVerifier [0x00007FF70A1F6197+4059159]
+	GetHandleVerifier [0x00007FF70A1EDF63+4025827]
+	GetHandleVerifier [0x00007FF709EBF029+687785]
+	(No symbol) [0x00007FF709D9B508]
+	(No symbol) [0x00007FF709D97564]
+	(No symbol) [0x00007FF709D976E9]
+	(No symbol) [0x00007FF709D88094]
+	BaseThreadInitThunk [0x00007FFBA93855A0+16]
+	RtlUserThreadStart [0x00007FFBA992485B+43]
+</status>
+</test>
+<status status="FAIL" starttime="20240302 12:42:56.637" endtime="20240302 12:43:01.978"/>
+</suite>
+<status status="FAIL" starttime="20240302 12:42:56.595" endtime="20240302 12:43:01.981"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">admin</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Admin">Tests.Admin</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240302 12:42:56.657" level="ERROR">Error in file 'C:\Users\SyedIbadUrRehman\Desktop\hrm\tests\admin.robot' on line 5: Setting 'Test Setup' is not allowed in resource file.</msg>
+<msg timestamp="20240302 12:42:56.657" level="ERROR">Error in file 'C:\Users\SyedIbadUrRehman\Desktop\hrm\init.robot' on line 4: Error in file 'C:\Users\SyedIbadUrRehman\Desktop\hrm\tests\admin.robot' on line 7: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

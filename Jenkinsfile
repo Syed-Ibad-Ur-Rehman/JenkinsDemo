@@ -43,7 +43,7 @@ pipeline {
                     //     logFileName: 'log.html',
                     //     reportFileName: 'report.html'
                     // )
-                    junit 'robot-results/output.xml'
+                    junit '*/robot-results/output.xml'
                 }
             }
         }

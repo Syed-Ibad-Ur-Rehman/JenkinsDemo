@@ -17,6 +17,21 @@ pipeline {
                 // Example: sh 'mvn clean install'
             }
         }
+                stage('Test') {
+            steps {
+                // Run your test commands here
+                echo 'Running tests...'
+                // Example: sh 'mvn test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Run deployment steps here
+                echo 'Deploying the project...'
+                // Example: sh 'deploy-script.sh'
+            }
+        }
 
         }
 

@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Run your build commands here
-                robot --include admin .
+                
                 echo 'Building the project...'
                 // Example: sh 'mvn clean install'
             }
@@ -20,6 +20,7 @@ pipeline {
                 stage('Test') {
             steps {
                 // Run your test commands here
+                robot --include admin .
                 echo 'Running tests...'
                 // Example: sh 'mvn test'
             }

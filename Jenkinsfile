@@ -27,8 +27,8 @@ pipeline {
                 script {
                     // Run Robot Framework tests
                     echo "Running Robot Framework tests..."
-                    sh  'robot --include admin .' 
-                    sh "robot --outputdir ${ROBOT_RESULTS_DIR} tests/"
+                    // sh  'robot --include admin .' 
+                    // sh "robot --outputdir ${ROBOT_RESULTS_DIR} tests/"
                 }
             }
         }

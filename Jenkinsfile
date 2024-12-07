@@ -37,12 +37,13 @@ pipeline {
             steps {
                 script {
                     // Publish Robot Framework results using the Robot Framework plugin
-                    robotResults(
-                        outputDir: "${ROBOT_RESULTS_DIR}",
-                        outputFileName: 'output.xml',
-                        logFileName: 'log.html',
-                        reportFileName: 'report.html'
-                    )
+                    // robotResults(
+                    //     outputDir: "${ROBOT_RESULTS_DIR}",
+                    //     outputFileName: 'output.xml',
+                    //     logFileName: 'log.html',
+                    //     reportFileName: 'report.html'
+                    // )
+                    junit '**/robot-results/output.xml' 
                 }
             }
         }

@@ -37,7 +37,7 @@ pipeline {
             steps {
                 script {
                     // Publish Robot Framework results using the Robot Framework plugin
-                    robotPublish(
+                    robotResults(
                         outputDir: "${ROBOT_RESULTS_DIR}",
                         outputFileName: 'output.xml',
                         logFileName: 'log.html',

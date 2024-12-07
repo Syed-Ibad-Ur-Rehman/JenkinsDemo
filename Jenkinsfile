@@ -36,7 +36,6 @@ pipeline {
         stage('Publish Robot Framework Results') {
             steps {
                 script {
-                    echo ${ROBOT_RESULTS_DIR}
                     // Publish Robot Framework results using the Robot Framework plugin
                     // robotResults(
                     //     outputDir: "${ROBOT_RESULTS_DIR}",

@@ -43,7 +43,7 @@ pipeline {
                     //     logFileName: 'log.html',
                     //     reportFileName: 'report.html'
                     // )
-                    junit 'output.xml'
+                    junit 'C:/jenkins/JenkinsHome/workspace/QA Automation/All suite/Microservices/robot-results/output.xml'
                 }
             }
         }

@@ -13,14 +13,14 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                script {
-                    // Install required dependencies (e.g., Robot Framework, libraries)
-                    sh 'pip install robotframework'
-                }
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         script {
+        //             // Install required dependencies (e.g., Robot Framework, libraries)
+        //             sh 'pip install robotframework'
+        //         }
+        //     }
+        // }
 
         stage('Run Robot Framework Tests') {
             steps {

@@ -36,7 +36,7 @@ pipeline {
         stage('Publish Robot Framework Results') {
             steps {
                 script {
-                    echo 'robot-results'
+                    echo ${ROBOT_RESULTS_DIR}
                     // Publish Robot Framework results using the Robot Framework plugin
                     // robotResults(
                     //     outputDir: "${ROBOT_RESULTS_DIR}",
@@ -44,7 +44,7 @@ pipeline {
                     //     logFileName: 'log.html',
                     //     reportFileName: 'report.html'
                     // )
-                    // junit 'C:\jenkins\JenkinsHome\workspace\QA Automation\All suite\Microservices\robot-results\output.xml' 
+                    junit ${ROBOT_RESULTS_DIR} tests/output.xml 
                 }
             }
         }

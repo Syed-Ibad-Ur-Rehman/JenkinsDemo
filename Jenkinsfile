@@ -13,22 +13,22 @@ pipeline {
             }
         }
 
-        // stage('Install Dependencies') {
-        //     steps {
-        //         script {
-        //             // Install required dependencies (e.g., Robot Framework, libraries)
-        //             sh 'pip install robotframework'
-        //         }
-        //     }
-        // }
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    // Install required dependencies (e.g., Robot Framework, libraries)
+                    bat  'pip install robotframework'
+                }
+            }
+        }
 
         stage('Run Robot Framework Tests') {
             steps {
                 script {
                     // Run Robot Framework tests
                     echo "Running Robot Framework tests..."
-                    // sh  'robot --include admin .' 
-                    // sh "robot --outputdir ${ROBOT_RESULTS_DIR} tests/"
+                    bat   'robot --include admin .' 
+                    bat  "robot --outputdir ${ROBOT_RESULTS_DIR} tests/"
                 }
             }
         }

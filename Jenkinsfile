@@ -47,8 +47,8 @@ pipeline {
             post {
                 always {
                     step([
-                            $class              : 'robot-results',
-                            outputPath          : 'test_results',
+                            $class              : 'RobotPublisher',
+                            outputPath          : 'robot-results',
                             outputFileName      : "output.xml",
                             reportFileName      : 'report.html',
                             logFileName         : 'log.html',

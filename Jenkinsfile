@@ -33,22 +33,6 @@ pipeline {
             }
         }
 
-        stage('Publish Robot Framework Results') {
-            steps {
-                script {
-                    // Publish Robot Framework results using the Robot Framework plugin
-                    // robotResults(
-                    //     outputDir: "${ROBOT_RESULTS_DIR}",
-                    //     outputFileName: 'output.xml',
-                    //     logFileName: 'log.html',
-                    //     reportFileName: 'report.html'
-                    // )
-                   robot results: 'C:/jenkins/JenkinsHome/workspace/QA Automation/All suite/Microservices/robot-results/output.xml', log: 'robot-results/log.html', report: 'robot-results/report.html'
-
-                }
-            }
-        }
-
         stage('Display Build History') {
             steps {
                 script {
@@ -60,17 +44,19 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            echo 'Cleaning up...'
-        }
-
-        success {
-            echo 'Build and tests completed successfully!'
-        }
-
-        failure {
-            echo 'Build or tests failed.'
-        }
-    }
+            post {
+                always {
+                    step([
+                            $class              : 'RobotPublisher',
+                            outputPath          : 'test_results',
+                            outputFileName      : "output.xml",
+                            reportFileName      : 'report.html',
+                            logFileName         : 'log.html',
+                            disableArchiveOutput: false,
+                            passThreshold       : 95.0,
+                            unstableThreshold   : 95.0,
+                            otherFiles          : "**/*.png",
+                    ])
+                }
+            }
 }

@@ -43,7 +43,7 @@ pipeline {
                     //     logFileName: 'log.html',
                     //     reportFileName: 'report.html'
                     // )
-                   robot results: 'robot-results/output.xml', log: 'robot-results/log.html', report: 'robot-results/report.html'
+                   robot results: 'C:/jenkins/JenkinsHome/workspace/QA Automation/All suite/Microservices/robot-results/output.xml', log: 'robot-results/log.html', report: 'robot-results/report.html'
 
                 }
             }

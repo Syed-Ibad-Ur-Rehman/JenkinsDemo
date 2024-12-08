@@ -14,7 +14,7 @@ node {
 
         // Publish Robot Framework Results
         echo "Publishing test results..."
-        robotPublish(
+            $class: 'RobotPublisher',
             outputDir: 'robot-results',
             outputFileName: 'output.xml',
             logFileName: 'log.html',
@@ -23,7 +23,7 @@ node {
             passThreshold: 95.0,
             unstableThreshold: 95.0,
             otherFiles: '**/*.png'
-        )
+ 
         build job: 'Test1', wait: false  
         
     } catch (Exception e) {

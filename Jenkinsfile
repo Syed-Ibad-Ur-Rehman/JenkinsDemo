@@ -11,9 +11,7 @@ pipeline {
                 // Checkout the code from the Git repository
                 git branch: 'main' , changelog: false, poll: false, url: 'https://github.com/Syed-Ibad-Ur-Rehman/JenkinsDemo.git'
             }
-            when {
-                    expression { false }
-              }
+           
         }
 
         stage('Install Dependencies') {
@@ -23,9 +21,7 @@ pipeline {
                     bat  'pip install robotframework'
                 }
             }
-              when {
-                    expression { false }
-              }
+              
         }
 
         stage('Run Robot Framework Tests') {

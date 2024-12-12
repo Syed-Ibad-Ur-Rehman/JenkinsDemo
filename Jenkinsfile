@@ -17,7 +17,7 @@ pipeline{
         trim: true
 
         booleanParam name: 'Send Email'
-        defaultValue: false,
+        defaultValue: false
     }
     stages {
         stage('Run downstream suites') {
@@ -33,6 +33,6 @@ pipeline{
                     deleteDir()
                 }
         }
-        
+
     }
 }

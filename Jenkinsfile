@@ -2,30 +2,32 @@ pipeline {
     agent any
 
     stages {
-        stage('All Suites') {
-            steps {
-                script {
-                    echo 'Running All Suites'
-                    // Add commands for suite-related tasks
+        stage('All Tests') {
+            parallel {
+                stage('Test Suite 1') {
+                    steps {
+                        echo 'Running Test Suite 1'
+                    }
+                }
+                stage('Test Suite 2') {
+                    steps {
+                        echo 'Running Test Suite 2'
+                    }
                 }
             }
         }
 
         stage('All Suites Integration') {
             steps {
-                script {
-                    echo 'Running All Suites Integration'
-                    // Add commands for integration-related tasks
-                }
+                echo 'Running Integration Tests'
+                // Add your integration commands here
             }
         }
 
         stage('Feature Branch Testing') {
             steps {
-                script {
-                    echo 'Running Feature Branch Testing'
-                    // Add commands for testing feature branches
-                }
+                echo 'Running Feature Branch Tests'
+                // Add your branch testing commands here
             }
         }
     }

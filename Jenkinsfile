@@ -1,7 +1,7 @@
 
 
 def globalagent = any
-def default_client_Name = 'https://opensource-demo.orangehrmlive.com '
+def default_client_Name = 'https://opensource-demo.orangehrmlive.com'
 
 pipeline{
     agent  any    
@@ -15,11 +15,14 @@ pipeline{
         defaultValue: null,
         trim: true
 
-        // booleanParam name: 'Send Email'
-        // defaultValue: false
+        booleanParam name: 'Send Email'
+        defaultValue: false
     }
     stages {
         stage('Run downstream suites') {
+            echo "JOB_BASE_NAME: ${env.JOB_BASE_NAME}"
+echo "ClientName: ${params.ClientName}"
+echo "TestTags: ${params.TestTags}"
             when {
                 beforeAgent true
                 expression {env.JOB_BASE_NAME == 'All_Suites' || env.JOB_BASE_NAME == 'All_Test'}

@@ -15,8 +15,8 @@ pipeline{
         defaultValue: null,
         trim: true
 
-        booleanParam name: 'Send Email'
-        defaultValue: false
+        // booleanParam name: 'Send Email'
+        // defaultValue: false
     }
     stages {
         stage('Run downstream suites') {

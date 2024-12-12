@@ -20,9 +20,12 @@ pipeline{
     }
     stages {
         stage('Run downstream suites') {
+            steps {
+                script {
             echo "JOB_BASE_NAME: ${env.JOB_BASE_NAME}"
-echo "ClientName: ${params.ClientName}"
-echo "TestTags: ${params.TestTags}"
+            echo "ClientName: ${params.ClientName}"
+            echo "TestTags: ${params.TestTags}"
+                }}
         //     when {
         //         beforeAgent true
         //         expression {env.JOB_BASE_NAME == 'All_Suites' || env.JOB_BASE_NAME == 'All_Test'}

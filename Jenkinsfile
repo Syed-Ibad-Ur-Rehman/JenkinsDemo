@@ -4,9 +4,8 @@ def globalagent = any
 def default_client_Name = 'https://opensource-demo.orangehrmlive.com '
 
 pipeline{
-    agent {
-        any    
-    }
+    agent  any    
+
     parameters{
         string name: 'ClientName',
         defaultValue: default_client_Name,

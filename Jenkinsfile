@@ -23,18 +23,18 @@ pipeline{
             echo "JOB_BASE_NAME: ${env.JOB_BASE_NAME}"
 echo "ClientName: ${params.ClientName}"
 echo "TestTags: ${params.TestTags}"
-            when {
-                beforeAgent true
-                expression {env.JOB_BASE_NAME == 'All_Suites' || env.JOB_BASE_NAME == 'All_Test'}
-            }
-               steps {
-                    dir('downstream') {
-                    deleteDir()
-                }
-                    dir('downstream-aggregate') {
-                    deleteDir()
-                }
-        }
+        //     when {
+        //         beforeAgent true
+        //         expression {env.JOB_BASE_NAME == 'All_Suites' || env.JOB_BASE_NAME == 'All_Test'}
+        //     }
+        //        steps {
+        //             dir('downstream') {
+        //             deleteDir()
+        //         }
+        //             dir('downstream-aggregate') {
+        //             deleteDir()
+        //         }
+        // }
 
     }
 }

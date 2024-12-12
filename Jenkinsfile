@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
      parameters {
-        string(name: 'ClientName', defaultValue: default_client_Name, trim: true)
+        string(name: 'ClientName', defaultValue: 'default_client_Name', trim: true)
         string(name: 'TestTags', defaultValue: '', trim: true)
         booleanParam(name: 'Send Email', defaultValue: false, description: 'Whether to send an email or not')
     }

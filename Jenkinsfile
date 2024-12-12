@@ -7,7 +7,7 @@ pipeline {
 
     parameters{
         string name: 'ClientName',
-        defaultValue: default_client_Name,
+        defaultValue: 'default_client_Name',
         trim: true
 
         string name: 'TestTags',

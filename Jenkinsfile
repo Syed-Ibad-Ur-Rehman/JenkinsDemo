@@ -1,6 +1,10 @@
 pipeline {
     agent any 
 
+    environment {
+        ROBOT_RESULTS_DIR = 'robot-results'
+    }
+
      parameters {
         string(name: 'ClientName', defaultValue: 'default_client_Name', trim: true)
         string(name: 'TestTags', defaultValue: '', trim: true)

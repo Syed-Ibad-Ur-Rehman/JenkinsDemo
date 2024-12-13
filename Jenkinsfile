@@ -53,8 +53,7 @@ pipeline {
                     // Run Robot Framework tests
                     echo "Running Robot Framework tests..."
                     // bat   'robot --include admin .' 
-                    bat  "robot --outputdir ${ROBOT_RESULTS_DIR}"
-                    bat  "tests/"
+                    bat  "robot --outputdir ${ROBOT_RESULTS_DIR}tests/"
                 }
             }
         }

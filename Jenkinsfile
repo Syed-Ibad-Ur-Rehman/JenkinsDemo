@@ -8,7 +8,7 @@ pipeline {
      parameters {
         string(name: 'ClientName', defaultValue: 'default_client_Name', trim: true)
         string(name: 'TestTags', defaultValue: '', trim: true)
-        booleanParam(name: 'Send Email', defaultValue: false, description: 'Whether to send an email or not')
+        booleanParam(name: 'Send Email', defaultValue: true, description: 'Whether to send an email or not')
     }
 
     stages {
@@ -67,7 +67,7 @@ pipeline {
                             reportFileName      : 'report.html',
                             logFileName         : 'log.html',
                             disableArchiveOutput: false,
-                            passThreshold       : 95.0,
+                            passThreshold       : 100,
                             unstableThreshold   : 95.0,
                             otherFiles          : "**/*.png",
                     ])

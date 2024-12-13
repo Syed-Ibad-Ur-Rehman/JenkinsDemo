@@ -9,12 +9,22 @@ pipeline {
 
     stages {
         stage('Run downstream suites') {
+            when {
+                beforeAgent true
+                expression { env.JOB_BASE_NAME == 'Microservices'  }
+            }
             steps {
-                script{
-                    echo "JOB_BASE_NAME: ${env.JOB_BASE_NAME}"
-                    echo "ClientName: ${params.ClientName}"
-                    echo "TestTags: ${params.TestTags}"
-                }
+                // script{
+                //     echo "JOB_BASE_NAME: ${env.JOB_BASE_NAME}"
+                //     echo "ClientName: ${params.ClientName}"
+                //     echo "TestTags: ${params.TestTags}"
+                // }
+                  dir('downstream') {
+          deleteDir()
+        }
+        dir('downstream-aggregate') {
+          deleteDir()
+        }
             }
         }
     }

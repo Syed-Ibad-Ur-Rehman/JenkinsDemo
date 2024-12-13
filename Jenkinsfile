@@ -7,8 +7,8 @@ pipeline {
 
      parameters {
         string(name: 'ClientName', defaultValue: 'default_client_Name', trim: true)
-        string(name: 'TestTags', defaultValue: '', trim: true)
-        booleanParam(name: 'Send Email', defaultValue: true, description: 'Whether to send an email or not')
+        string(name: 'TestTags', defaultValue: 'GEP', trim: true)
+        booleanParam(name: 'SendEmail', defaultValue: true, description: 'Whether to send an email or not')
     }
 
     stages {

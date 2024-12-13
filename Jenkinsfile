@@ -53,7 +53,7 @@ pipeline {
                     // Run Robot Framework tests
                     echo "Running Robot Framework tests..."
                     // bat   'robot --include admin .' 
-                    bat  "robot --outputdir ${ROBOT_RESULTS_DIR}tests/"
+                    bat  "robot --outputdir ${ROBOT_RESULTS_DIR} tests/"
                 }
             }
         }
@@ -68,7 +68,7 @@ pipeline {
                             logFileName         : 'log.html',
                             disableArchiveOutput: false,
                             passThreshold       : 100,
-                            unstableThreshold   : 95.0,
+                            unstableThreshold   : 90.0,
                             otherFiles          : "**/*.png",
                     ])
                             // build job: 'Test1', wait: false

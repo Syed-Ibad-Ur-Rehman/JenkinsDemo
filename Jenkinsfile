@@ -6,7 +6,7 @@ pipeline {
     }
 
      parameters {
-        string(name: 'ClientName', efaultValue: 'default_client_Name', trim: true)
+        string(name: 'ClientName', defaultValue: 'efault_client_Name', trim: true)
         string(name: 'TestTags', defaultValue: 'GEP', trim: true, description: 'If you want to learn specific test case')
         booleanParam(name: 'SendEmail', defaultValue: true, description: 'Whether to send an email or not')
     }

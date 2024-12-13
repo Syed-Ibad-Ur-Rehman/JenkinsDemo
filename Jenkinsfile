@@ -71,7 +71,7 @@ pipeline {
                             unstableThreshold   : 95.0,
                             otherFiles          : "**/*.png",
                     ])
-                            build job: 'Test1', wait: false
+                            // build job: 'Test1', wait: false
                 }
             }
 }
